@@ -10,8 +10,25 @@
 <body>
     <div class="sidebar"></div>
     <div class="content">
-        <form action="https://my-server.com">
-            
+        <form action="https://my-server.com" method="post">
+            <p>This is definitely a real online service! We pray on vulnerable people to ensure you help us make millions each year. Sign up <em>now</em> to get started.</p>
+            <fieldset class="personal-deets">
+                <legend>Let's do this!</legend>
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first_name">
+                <label for="">Last Name</label>
+                <input type="text" id="last-name" name="last_name">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password"> <!--This one has no name as I don't want it sent to the backend-->
+            </fieldset>
+            <button type="submit" class="submit-button">Create Account</button>
+            <p>Already have an account?<a href="www.example.com">Log in</a></p>
         </form>
     </div>
 </body>
