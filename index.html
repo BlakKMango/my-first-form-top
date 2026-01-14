@@ -8,10 +8,15 @@
     <title>My First Form</title>
 </head>
 <body>
-    <div class="sidebar"></div>
+    <div class="sidebar">
+        <div class="logo">
+            <img id="logo-img" src="img/odin-lined-logo.png" alt="The Odin Project logo (outline of a viking)">
+            <h1 id="logo-text">ODIN</h1>
+        </div>
+    </div>
     <div class="content">
+        <p class="cta">This is definitely a real online service! We pray on vulnerable people to ensure you help us make millions each year. Sign up <em>now</em> to get started.</p>
         <form action="https://my-server.com" method="post">
-            <p>This is definitely a real online service! We pray on vulnerable people to ensure you help us make millions each year. Sign up <em>now</em> to get started.</p>
             <fieldset class="personal-deets">
                 <legend>Let's do this!</legend>
                 <label for="first-name">First Name</label>
@@ -28,8 +33,8 @@
                 <input type="password" id="confirm-password"> <!--This one has no name as I don't want it sent to the backend-->
             </fieldset>
             <button type="submit" class="submit-button">Create Account</button>
-            <p>Already have an account?<a href="www.example.com">Log in</a></p>
         </form>
+        <p class="login">Already have an account?<a href="www.example.com">Log in</a></p>
     </div>
 </body>
 </html>

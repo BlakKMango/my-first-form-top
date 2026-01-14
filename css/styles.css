@@ -1,5 +1,14 @@
+@font-face {
+    font-family: 'Flavors';
+    src: url('../fonts/Flavors-Regular.woff2') format('woff2'),
+        url('../fonts/Flavors-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 html, body {
-    height: 100%;
+    min-height: 100dvh;
     box-sizing: border-box;
     border: 0;
     padding: 0;
@@ -8,18 +17,51 @@ html, body {
 
 body {
     display: flex;
+    overflow: hidden;
 }
 
 .sidebar, .content {
     display: flex;
-    min-height: 100%;
+    min-height: 0;
 }
 
+/*----SIDEBAR SPECIFIC----*/
+
 .sidebar {
-    width: 33%;
+    flex-direction: column;
+    justify-content: flex-start;
     min-height: 100%;
-    flex: auto;
-    background: center no-repeat url("../img/casey-horner-75_s8iWHKLs-unsplash.webp");
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 33%;
+    background: center top no-repeat url("../img/casey-horner-75_s8iWHKLs-unsplash.webp");
+}
+
+.logo {
+    position: relative;
+    top: 30dvh;
+    display: flex;
+    height: 100px;
+    width: 100%;
+    padding: 8px 0 8px 0;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    background-color: hsla(0, 0%, 0%, 0.175);
+}
+
+#logo-img {
+    max-height: 150px;
+    max-width: 100px;
+    height: auto;
+    width: 75px;
+}
+
+#logo-text {
+    font-family: 'Flavors', 'Courier New', Courier, monospace;
+    font-size: 56px;
+    font-weight: normal;
+    color: white;
 }
 
 .content {
@@ -28,8 +70,9 @@ body {
     justify-content: center;
     align-items: flex-start;
     gap: 40px;
-    width: 66%;
     min-height: 100%;
-    flex: 2 2 auto;
+    flex-grow: 2;
+    flex-shrink: 2;
+    flex-basis: 66%;
 }
 
