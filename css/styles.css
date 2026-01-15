@@ -7,8 +7,12 @@
     font-display: swap;
 }
 
+:root {
+    --content-padding: 42px;
+}
+
 html, body {
-    min-height: 100dvh;
+    min-height: 100vh;
     box-sizing: border-box;
     border: 0;
     padding: 0;
@@ -39,7 +43,7 @@ body {
 
 .logo {
     position: relative;
-    top: 30dvh;
+    top: 16vh;
     display: flex;
     height: 100px;
     width: 100%;
@@ -64,18 +68,29 @@ body {
     color: white;
 }
 
+/* --- CONTENT SECTION --- */
+
 .content {
     display: flex;
+    position: relative;
+    top: 0vh;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-start;
     gap: 40px;
     min-height: 100%;
     flex-grow: 2;
     flex-shrink: 2;
-    flex-basis: 66%;
     background-color: rgb(239, 242, 245);
 }
+
+.cta {
+    width: 80%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2vh;
+    padding-left: var(--content-padding);
+}
+
 
 form {
     min-width: 100%;
@@ -84,6 +99,8 @@ form {
     background-color: white;
     font-family: monospace;
     gap: 24px;
+    box-sizing: border-box;
+    box-shadow: grey 5px 10px 20px -10px;
 }
 
 fieldset {
@@ -107,7 +124,9 @@ legend {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    width: clamp(45%, 180px, 100%)
+    width: clamp(45%, 180px, 100%);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
 }
 
 input {
@@ -120,5 +139,33 @@ input {
 label {
     width: 100%;
     white-space: nowrap;
+}
+
+button {
+    margin-left: var(--content-padding);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(2, 78, 104);
+    color: rgb(239, 242, 245);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.login {
+    margin-left: var(--content-padding);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+    color: rgb(2, 78, 104);
+}
+
+a:visited {
+    color: rgb(255, 72, 0);
+}
+
+em {
+    font-weight: bold;
 }
 
