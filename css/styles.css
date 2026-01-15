@@ -67,12 +67,58 @@ body {
 .content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: flex-start;
     gap: 40px;
     min-height: 100%;
     flex-grow: 2;
     flex-shrink: 2;
     flex-basis: 66%;
+    background-color: rgb(239, 242, 245);
+}
+
+form {
+    min-width: 100%;
+    max-height: fit-content;
+    padding: 24px 12px 24px 32px;
+    background-color: white;
+    font-family: monospace;
+    gap: 24px;
+}
+
+fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    width: clamp(175px, 60%, 100%);
+    gap: 24px;
+    border: none;
+    padding: none;
+}
+
+legend {
+    margin-bottom: 8px;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 3dvh;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: clamp(45%, 180px, 100%)
+}
+
+input {
+    height: 24px;
+    border: 1px solid;
+    border: 1px solid rgb(2, 78, 104);
+    border-radius: 10px;
+}
+
+label {
+    width: 100%;
+    white-space: nowrap;
 }
 
