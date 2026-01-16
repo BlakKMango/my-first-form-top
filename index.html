@@ -21,27 +21,27 @@
                 <legend>Let's do this!</legend>
                 <div class="input-field">
                     <label for="first-name">FIRST NAME</label>
-                    <input type="text" id="first-name" name="first_name">
+                    <input required type="text" id="first-name" name="first_name" minlength="2">
                 </div>
                 <div class="input-field">
-                    <label for="">LAST NAME</label>
-                    <input type="text" id="last-name" name="last_name">
+                    <label for="last-name">LAST NAME</label>
+                    <input type="text" id="last-name" name="last_name" minlength="2">
                 </div>
                 <div class="input-field">
                     <label for="email">EMAIL</label>
-                    <input type="email" id="email" name="email">
+                    <input required type="email" id="email" name="email">
                 </div>
                 <div class="input-field">
                     <label for="phone">PHONE NUMBER</label>
-                    <input type="tel" id="phone" name="phone">
+                    <input required type="tel" id="phone" name="phone" maxlength="17" minlength="7">
                 </div>
                 <div class="input-field">
                     <label for="password">PASSWORD</label>
-                    <input type="password" id="password" name="password">
+                    <input required type="password" id="password" name="password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,64}">
                 </div>
                 <div class="input-field">
                     <label for="confirm-password">CONFIRM PASSWORD</label>
-                    <input type="password" id="confirm-password"> <!--This one has no name as I don't want it sent to the backend-->
+                    <input required type="password" id="confirm-password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,64}"> <!--This one has no name as I don't want it sent to the backend-->
                 </div>
             </fieldset>
         </form>
